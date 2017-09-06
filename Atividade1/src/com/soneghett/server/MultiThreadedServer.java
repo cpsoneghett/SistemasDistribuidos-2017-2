@@ -37,7 +37,7 @@ public class MultiThreadedServer implements Runnable {
 				throw new RuntimeException( "Erro ao aceitar conexão do cliente.", e );
 			}
 
-			new Thread( new WorkerRunnable( clientSocket, "Multithreaded Server" ) ).start();
+			new Thread( new WorkerRunnable( clientSocket, "Servidor MultiThread" ) ).start();
 
 		}
 
