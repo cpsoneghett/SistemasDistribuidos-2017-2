@@ -25,6 +25,7 @@ public class TCPServer_2 {
 				String msg = (String) in.readObject();
 				out.writeObject( msg );
 				out.flush();
+				System.out.println( msg + "\n" );
 				in.close();
 				out.close();
 				c.close();

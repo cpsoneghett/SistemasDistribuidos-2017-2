@@ -12,10 +12,10 @@ public class TCPClient_1 {
 		Socket s = null;
 		try {
 			int serverPort = 7896;
-			s = new Socket( args[ 1 ], serverPort );
+			s = new Socket( "localhost", serverPort );
 			PrintWriter out = new PrintWriter( s.getOutputStream(), true );
 			BufferedReader in = new BufferedReader( new InputStreamReader( s.getInputStream() ) );
-			out.println( args[ 0 ] );
+			out.println( "teste" );
 			String data = in.readLine();
 			System.out.println( "Recebido: " + data );
 		} catch ( Exception e ) {

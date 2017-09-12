@@ -11,10 +11,10 @@ public class TCPClient_2 {
 		Socket s = null;
 		try {
 			int serverPort = 7896;
-			s = new Socket( args[ 1 ], serverPort );
+			s = new Socket( "localhost", serverPort );
 			ObjectOutputStream out = new ObjectOutputStream( s.getOutputStream() );
 			ObjectInputStream in = new ObjectInputStream( s.getInputStream() );
-			out.writeObject( args[ 0 ] );
+			out.writeObject( "Objeto a ser escrito." );
 			out.flush();
 			String data = (String) in.readObject();
 			System.out.println( "Recebido: " + data );

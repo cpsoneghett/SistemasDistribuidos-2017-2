@@ -13,6 +13,10 @@ public class MultiThreadedServer implements Runnable {
 	protected boolean isStoped = false;
 	protected Thread runninThread = null;
 
+	public MultiThreadedServer() {
+		super();
+	}
+
 	public MultiThreadedServer( int serverPort ) {
 		super();
 		this.serverPort = serverPort;

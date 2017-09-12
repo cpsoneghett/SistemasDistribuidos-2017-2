@@ -2,7 +2,7 @@ package com.soneghett.main;
 
 import com.soneghett.server.MultiThreadedServer;
 
-public class Main {
+public class MainServer {
 
 	public static void main( String[] args ) {
 		

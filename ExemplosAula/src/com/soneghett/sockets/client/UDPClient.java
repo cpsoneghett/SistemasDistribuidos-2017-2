@@ -12,8 +12,8 @@ public class UDPClient {
 
 		try {
 			aSocket = new DatagramSocket();
-			byte[] m = args[ 0 ].getBytes();
-			InetAddress aHost = InetAddress.getByName( args[ 1 ] );
+			byte[] m = "Frase de teste.".getBytes();
+			InetAddress aHost = InetAddress.getByName( "localhost" );
 			int serverPort = 7896;
 			DatagramPacket request = new DatagramPacket( m, m.length, aHost, serverPort );
 			aSocket.send( request );

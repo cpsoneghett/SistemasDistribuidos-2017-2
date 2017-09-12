@@ -25,6 +25,7 @@ public class TCPServer_1 {
 				PrintWriter out = new PrintWriter( c.getOutputStream(), true );
 				BufferedReader in = new BufferedReader( new InputStreamReader( c.getInputStream() ) );
 				String msg = in.readLine();
+				System.out.print( msg + "\n" );
 				out.println( msg );
 				in.close();
 				out.close();
